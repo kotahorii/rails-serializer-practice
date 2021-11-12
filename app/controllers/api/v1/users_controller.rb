@@ -16,7 +16,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def show
-    render status: 200, json: { data: @user }
+    render status: 200, json: @user, serializer: UserSerializer
   end
 
   def update
